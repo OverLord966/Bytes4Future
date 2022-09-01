@@ -4,3 +4,4 @@ function linux(string){
 
 (linux("Olá Linux, configurei o ssh com sucesso"))
 linux("Olá Linux, configurei o ASRock tambem")
+linux("All connected")
