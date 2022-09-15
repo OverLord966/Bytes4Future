@@ -1,0 +1,18 @@
+function combineArrays(array1,array2){
+    let array3 = [];
+    let maiorIndex = Math.max(array1.length, array2.length);
+    for(let i = 0; i < maiorIndex; i++){
+
+        let typeOfArray1 = typeof(array1[i])
+        if(typeOfArray1 !== "undefined"){
+            array3.push(array1[i]);
+        }
+
+        let typeOfArray2 = typeof(array2[i]);
+        if(typeOfArray2 !== "undefined"){
+            array3.push(array2[i]);
+        }
+    }
+    console.log(array3);
+    return array3;
+}

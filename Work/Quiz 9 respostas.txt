@@ -1,0 +1,11 @@
+quiz 9 respostas
+
+1T
+2T
+3F
+4F
+5+
+6Number e string
+7F
+8T
+9T

@@ -1,0 +1,33 @@
+function stringSuperReduzida(str) {
+    let reduzida = false
+    while (!reduzida) {
+        reduzida = true
+        for (let i = 0; i < str.length; i++) {
+            if (str[i] === str[i + 1]) {
+                str = str.slice(0, i) + str.slice(i + 2);
+                reduzida = false;
+                
+            }
+        }
+    }
+    if(str.length === 0) return "String Vazia"
+    return str
+}
+
+function stringSuperReduzida(string) {
+    let arr = Array.from(string)
+    let finished = true
+    while(finished) {
+        finished = false
+        for (let i = 0; i < arr.length - 1; i++) {
+            if (arr[i] === arr[i + 1]) {
+                arr[i] = " "
+                arr[i + 1] = " "
+                finished = true;
+            }
+        }
+        arr = arr.filter(c => c !== " ")
+    }
+    if (arr.length == 0) return "String Vazia"
+    return arr.join('');
+}

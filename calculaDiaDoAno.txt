@@ -1,0 +1,141 @@
+function diaDoAno(dia, mes){
+let dias = 0
+	if(mes == 1){
+  	if(dia < 1 || dia > 31){
+    	return "Por favor"
+    }
+    else{
+    dias = dia
+    }
+    
+  }
+  if(mes == 2){
+  	if(dia < 1 || dia > 28){
+    	return "Por favor"
+    }
+    else{
+    dias = 31 + dia 
+    }
+    
+  }
+  if(mes == 3){
+  	if(dia < 1 || dia > 31){
+    	return "Por favor"
+    }
+    else{
+    return 59 + dia
+    }
+    
+  }
+  if(mes == 4){
+  	if(dia < 1 || dia > 30){
+    	return "Por favor"
+    }
+    else{
+    return 90 + dia
+    }
+    
+  }
+  if(mes == 5){
+  	if(dia < 1 || dia > 31){
+    	return "Por favor"
+    }
+    else{
+    return 120 + dia
+    }
+    
+  }
+  if(mes == 6){
+  	if(dia < 1 || dia > 31){
+    	return "Por favor"
+    }
+    else{
+    return 151 + dia
+    }
+      
+}
+if(mes == 7){
+  	if(dia < 1 || dia > 31){
+    	return "Por favor"
+    }
+    else{
+    return 181 + dia
+    }
+    
+  }
+  if(mes == 8){
+  	if(dia < 1 || dia > 31){
+    	return "Por favor"
+    }
+    else{
+    return 212 + dia
+    }
+    
+  }
+  if(mes == 9){
+  	if(dia < 1 || dia > 31){
+    	return "Por favor"
+    }
+    else{
+    return 243 + dia
+    }
+    
+  }
+  if(mes == 10){
+  	if(dia < 1 || dia > 31){
+    	return "Por favor"
+    }
+    else{
+    return 273 + dia
+    }
+    
+  }
+  if(mes == 11){
+  	if(dia < 1 || dia > 30){
+    	return "Por favor"
+    }
+    else{
+    dias = 304 + dia
+    }
+    
+  }
+  if(mes == 12){
+  	if(dia < 1 || dia > 31){
+    	return "Por favor"
+    }
+    else{
+    return 334 + dia
+    }
+      
+}
+return dias
+}
+console.log(diaDoAno(3, 4))
+
+
+if(dia < 1 || dia > 31) {return "Por Favor"}
+if(mes < 1 || mes > 12) {return "Por Favor"}
+if(dia < 1 || dia > 30) {return "Por Favor"}
+if(dia < 1 || dia > 28) {return "Por Favor"}
+const MESES = new Map([
+	[1, 31],
+  [2, 28],
+  [3, 31],
+  [4, 30],
+  [5, 31],
+  [6, 30],
+  [7, 31],
+  [8, 31],
+  [9, 30],
+  [10, 31],
+  [11, 30],
+  [12, 31],
+])
+
+let diasTotais = 0;
+
+for(let i = 1; i < mes; i++){
+	diasTotais += MESES.get(i)
+}
+return diasTotais
+}
