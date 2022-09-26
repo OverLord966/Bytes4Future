@@ -1,13 +1,19 @@
 import { useState } from "react"
-export default function HelloInput() 
-{    
-    const [message, setMessage] = useState('')    
-    const handleChange = event => {        
-        setMessage(event.target.value)    }
-        return (    
-        <div>        
-            <input type="text" id="message" name="message" onChange={handleChange} value={message}></input>
-            <p>Hello, {message}!</p>    
-            </div>
-        )
-}   
+export default function HelloInput() {
+    const [texto, setTexto] = useState("")
+    const [click, setClick] = useState(false)
+    return (
+        <div>
+            <input
+                onChange={(ele) => setTexto(ele.target.value)}
+                value={texto}
+                type={"text"}
+            />
+            {click === false ? (
+                <button onClick={() => setClick(true)}>Apresentar</button>
+            ) : (
+                <p>Hello, {texto}!</p>
+            )}
+        </div>
+    );
+}
