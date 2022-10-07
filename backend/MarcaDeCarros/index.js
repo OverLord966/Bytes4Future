@@ -9,6 +9,7 @@ const existe = true;
 
 app.get("/api/carros/:marca", (req, res) => {
     //Retorna um JSON com todos os marca registados
+    console.log(req.params.marca)
     if(req.params.marca == "mercedes"){
         console.log("Existe")
         return res.status(200).json({marca: req.params.marca, existe: true})
