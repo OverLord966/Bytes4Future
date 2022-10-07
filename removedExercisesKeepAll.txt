@@ -1,0 +1,43 @@
+const defaultCompare = (e1, e2) => e1 === e2
+const defaultExtractKey = e => e
+
+function keepFirstRepeatedOnly(arr, compare = defaultCompare, extractKey = defaultExtractKey) {
+    const countMap = countOccurrences (arr, extractKey)
+    return [...countMap.entries()].reduce((acc, [key, count]) => count > 1 ? acc.concat(arr.find(e => extractKey(e) === key)) : acc, [])
+
+}
+
+function countOccurrences(arr, extractKey) {
+    return arr.reduce((acc, elem) => {
+        const key = extractKey(elem)
+        return new Map ([...acc, [key, (acc.get(key) ?? 0) + 1]
+        ])
+    }, new Map())
+}
+
+
+
+
+
+function defaultCompare(elem1,elem2){
+    return elem1 === elem2
+}
+function removeRepeatedKeepNone(array, compare = defaultCompare, extractKey){
+    let arr = []
+
+    for(let i = 0; i < array.length ; i++){
+        if(!arr.some(e => compare(e, array[i]))) arr.shift()
+    } return arr.reverse()
+}
+
+
+
+
+
+function removeRepeatedKeepLast(array, compare = defaultCompare){
+	return array.reduce((acc, v) => acc.filter(e => !compare(v, e)).concat(v), [])
+}
+
+function defaultCompare(e1, e2){
+	return e1 === e2
+}
